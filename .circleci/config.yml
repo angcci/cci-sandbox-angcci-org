@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: echo "this is a fork with Build forked pull requests off"
+          command: echo "this is a fork with Build forked pull requests on"
 
 workflows:
   build-and-test:
