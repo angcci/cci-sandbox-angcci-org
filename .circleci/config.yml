@@ -18,8 +18,10 @@ jobs:
     parallelism: 4
     steps:
       - checkout
-      - run: 
-        command: echo "hello"
+      - run:
+        name: say hi
+        command: |
+          echo "hello"
 workflows:
   version: 2
   build-test-lint:
