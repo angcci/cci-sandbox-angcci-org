@@ -19,9 +19,9 @@ jobs:
     steps:
       - checkout
       - run:
-        name: say hi
-        command: |
-          echo "hello"
+          name: say hi
+          command: |
+            echo "hello"
 workflows:
   version: 2
   build-test-lint:
