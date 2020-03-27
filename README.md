@@ -29,17 +29,10 @@ Request URL: https://circleci.com/graphql-unstable
 Request Method: POST
 Status Code: 200 OK
 ```
-Request payload
-```
-{operationName: "CreateContext", variables: {,…},…}
-operationName: "CreateContext"
-...
-contextName: "TEST1"
-ownerType: "ORGANIZATION"
-```
+
 4. visiting (https://circleci.com/gh/ORGNAME/REPONAME/edit#env-vars) as angelisamaria to add env. var to a specific project, click `Add Variable` and creating `TEST` works. Need to determine if the env var can be read when using in a config.
-5. Downloading firefox and attemping to create a context that way annnndddd it worked..
-6. Clearing the cache might also work
+5. Downloading firefox and attemping to create a context that way annnndddd it worked.. tried replicating this again and it did not work. 
+6. Also changing permissions for the team from `read` to `write` also worked
 
 # Permissions
 - Inviting a user to the team via GitHub will be mirrored in CircleCI
@@ -50,7 +43,7 @@ ownerType: "ORGANIZATION"
 
 
 ---
-Things to test & evaluate:
+Other things to test & evaluate:
 - Using PRs
 - GH Statuses
 - CircleCI Checks

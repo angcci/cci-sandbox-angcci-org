@@ -1,16 +1,6 @@
 version: 2.1
 jobs:
-  build-and-test:
-    macos:
-      xcode: "10.2.1"
-    environment:
-      FL_OUTPUT_DIR: output
-    steps:
-      - checkout
-      - run:
-          command: echo "this is a fork with Build forked pull requests off"
-
 workflows:
   build-and-test:
     jobs:
-      - build-and-test
+
