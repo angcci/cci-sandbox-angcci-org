@@ -7,7 +7,7 @@ jobs:
     steps:
     - run:
         name: say hi
-        command: apt-key list
+        command: exit 1
 workflows:
   version: 2
   my-build-workflow:
