@@ -5,6 +5,7 @@ jobs:
     - image: circleci/node
     steps:
     - checkout
+    - run: echo $HELLO
     - run:
         name: say hi
         command: sleep 125
