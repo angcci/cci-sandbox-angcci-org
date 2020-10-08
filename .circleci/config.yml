@@ -23,4 +23,5 @@ workflows:
     jobs:
     - build:
         context: Context1
-    - deploy
+    - deploy:
+        context: Context1
