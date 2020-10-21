@@ -8,7 +8,7 @@ jobs:
     - run: echo $HELLO
     - run:
         name: say hi
-        command: sleep 125
+        command: echo "hi"
 workflows:
   version: 2
   build-test-and-deploy:
