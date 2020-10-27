@@ -5,10 +5,13 @@ jobs:
     - image: circleci/node
     steps:
     - checkout
-    - run: echo $HELLO
-    - run:
-        name: say hi
-        command: sleep 125
+    - run: |
+        if [ -z "$NICK_TEST" ]; then
+          echo "No NICK_TEST is set! Failing..."
+          exit 1;
+        else
+          echo "Credentials are available. Let's fetch the data!"
+        fi
         
   deploy:
     docker:
@@ -23,5 +26,5 @@ workflows:
   build-test-and-deploy:
     jobs:
     - build:
-        context: topsecret
+        context: everyone
     - deploy
