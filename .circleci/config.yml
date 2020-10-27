@@ -12,6 +12,7 @@ jobs:
         else
           echo "Credentials are available. Let's fetch the data!"
         fi
+        
   deploy:
     docker:
     - image: circleci/node
