@@ -1,27 +1,21 @@
 version: 2.1
+
 jobs:
-  build:
-    docker:
-    - image: circleci/node
+  docker-hub-test:
+    machine: true
     steps:
-    - checkout
-    - run: echo $HELLO
-    - run:
-        name: say hi
-        command: sleep 125
-        
-  deploy:
-    docker:
-    - image: circleci/node
-    steps:
-    - checkout
-    - run:
-        name: say hi
-        command: sleep 124
+      - run: 
+          name: Docker Hub login if available
+          command: |
+            if [ -n "$DOCKERHUB_USERNAME" ]; then
+              docker login --username $DOCKERHUB_USERNAME --password $DOCKERHUB_PASSWORD
+            else
+              echo "Docker Hub credentials unavailable, pulling anonymously"
+            fi
+      - run: docker pull circleci/ruby:2.7
+      - run: echo "hello"
+
 workflows:
-  version: 2
-  build-test-and-deploy:
-    jobs:
-    - build:
-        context: topsecret
-    - deploy
+  docker-hub-test:
+      jobs:
+        - docker-hub-test
