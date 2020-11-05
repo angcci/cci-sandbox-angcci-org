@@ -1,4 +1,4 @@
-hoversion: 2
+version: 2
 jobs:
   build:
     machine:
