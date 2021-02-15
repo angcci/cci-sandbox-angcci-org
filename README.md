@@ -1,3 +1,3 @@
 
 Only build pull requests - on
-Build forked PRs - off
+Build forked PRs - on
