@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     machine:
@@ -8,8 +8,11 @@ jobs:
     - run:
         name: say hi
         command: echo "hi"
+
 workflows:
   version: 2
   my-build-workflow:
     jobs:
-    - build
+    - build:
+        context:
+          - topsecret
