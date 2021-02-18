@@ -1,2 +1,4 @@
-only build pr and build on forked pr's is "on" while a PR is open, will this build on CircleCI?
-another test
+only build prs - on
+build on forked pr's - on
+github status - on
+going to open a PR 
