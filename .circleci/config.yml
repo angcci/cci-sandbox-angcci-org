@@ -6,7 +6,7 @@ jobs:
   
     steps:
     - run:
-        name: fail
+        name: this will fail
         command: exit 1
 
 workflows:
