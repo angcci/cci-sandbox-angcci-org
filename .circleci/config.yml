@@ -6,13 +6,11 @@ jobs:
   
     steps:
     - run:
-        name: say hi
-        command: echo "hi"
+        name: fail
+        command: exit 1
 
 workflows:
   version: 2
   my-build-workflow:
     jobs:
-    - build:
-        context:
-          - topsecret
+    - build
