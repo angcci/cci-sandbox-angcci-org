@@ -7,7 +7,7 @@ jobs:
     steps:
     - run:
         name: say hi
-        command: echo "hello!"
+        command: echo "hi!"
 
 workflows:
   version: 2
