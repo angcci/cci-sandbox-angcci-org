@@ -6,8 +6,8 @@ jobs:
   
     steps:
     - run:
-        name: this job will fail
-        command: exit 1
+        name: say hi
+        command: echo "hello!"
 
 workflows:
   version: 2
